@@ -1,14 +1,16 @@
-name: CI
+name: CI  # workflow name 
 
-on:
-  push:
-    branches:
-        - main
+on:        # events (when the workflow will run)
+  push:   # trigger on push event
+    branches:  # which branch to trigger on
+        - main   # main branch
 
 
+
+        #  a very simple workflows of github
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-        - name: Hello world
-          run: echo "Hello Sushant"
+  build:             # a job name
+    runs-on: ubuntu-latest   # runner name (where the job will run)
+    steps:                   # steps are the sequence of task that will be executed in the job
+        - name: Hello world   # a step name
+          run: echo "Hello Sushant"  # a step command
