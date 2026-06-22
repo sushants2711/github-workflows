@@ -1,0 +1,32 @@
+name: Github Action Learning
+
+on:
+  push:
+    branches: 
+        - main
+
+
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout the code
+              run: echo "checkout the code"
+
+
+    test:
+        needs:  build
+        runs-on: ubuntu-latest
+        steps:
+            - name: print test job
+              run: echo "this is test job"
+
+
+
+    deploy:
+        needs: test
+        runs-on: ubuntu-latest
+        steps:
+            - name: print deploy job
+              run: echo "this is deploy job"
