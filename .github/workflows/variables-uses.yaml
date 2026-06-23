@@ -1,0 +1,16 @@
+name: Learning How to Use Variables
+
+on:
+  push:
+    branches:
+      - main
+
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print the data from using the variables
+        run: echo "Hello, ${{ vars.MY_NAME }}
