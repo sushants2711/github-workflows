@@ -13,4 +13,4 @@ jobs:
 
     steps:
       - name: Print the data from using the variables
-        run: echo "Hello, ${{ vars.MY_NAME }}
+        run: echo "Hello, ${{ vars.MY_NAME }}"
